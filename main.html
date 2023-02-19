@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Sharable URLs</title>
-  </head>
   <body>
-    <form>
+
+	   <form>
       <label for="name">Name:</label>
       <input type="text" id="name" name="name"><br><br>
       <label for="year">Year:</label>
@@ -12,20 +10,8 @@
       <input type="submit" id="button" value="Generate URL"><br><br>
     </form>
     <h3 id="url">https://localhost:8080/</h3>
-    <script>
-      const form = document.querySelector('form');
-      const url = document.querySelector('#url');
-      form.addEventListener('submit', (event) => {
-        event.preventDefault();
-        const name = document.querySelector('#name').value;
-        const year = document.querySelector('#year').value;
-        if (name && year) {
-          const queryString = `?name=${name}&year=${year}`;
-          url.textContent = `https://localhost:8080/${queryString}`;
-        } else {
-          alert('Name and year cannot be empty');
-        }
-      });
-    </script>
+    <script type="text/javascript" src="./script.js">
+</script>
   </body>
+
 </html>
